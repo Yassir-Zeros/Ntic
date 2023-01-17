@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "583513179743",
+    "project_id": "nticnoti-f4cee",
+    "storage_bucket": "nticnoti-f4cee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583513179743:android:076df6fa38af9d80057dea",
+        "android_client_info": {
+          "package_name": "com.nticrabat.notiUpp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583513179743-oo6vlmrhnu0eim35fdrp4129fvqk7h74.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn1eWyFauIw4LTRUlnTLScrt7w-EGxX-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583513179743-oo6vlmrhnu0eim35fdrp4129fvqk7h74.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
