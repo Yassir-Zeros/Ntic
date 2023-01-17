@@ -58,6 +58,7 @@ Future<void> main() async {
             messagingSenderId: Constants.messagingSenderId,
             projectId: Constants.projectId));
   }
+
   else{
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp();
