@@ -24,7 +24,6 @@ Future noti() async {
     await FirebaseMessaging.instance.subscribeToTopic(notiGroupe!.getString("not")!);
   print("main $notiGroupeName");
 }
-late int _totalNotifications;
 late final FirebaseMessaging _messaging;
 Future _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   print("Handling a background message: ${message.messageId}");
@@ -77,7 +76,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return OverlaySupport.global(
       child: GetMaterialApp(
-        title: 'Ntic App',
+        title: 'NTIC Notify',
         debugShowCheckedModeBanner: false,
         theme: Themes.dark,
         darkTheme: Themes.light,
@@ -85,8 +84,8 @@ class MyApp extends StatelessWidget {
         initialRoute: "/",
         getPages: [
           GetPage(
-              name: "/", page: () => GetStart(), middlewares: [AuthMiddleware()]),
-          GetPage(name: "/home", page: () => nHomePage())
+              name: "/", page: () => const GetStart(), middlewares: [AuthMiddleware()]),
+          GetPage(name: "/home", page: () => const nHomePage())
         ],
         //home: GetStart(),
       ),

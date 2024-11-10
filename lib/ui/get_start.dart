@@ -34,143 +34,98 @@ class _GetStartState extends State<GetStart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.theme.backgroundColor,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SingleChildScrollView(
-            physics: const NeverScrollableScrollPhysics(),
-            child: Column(
-              children: <Widget>[
-                Container(
-                  height: 400,
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/background.png'),
-                          fit: BoxFit.fill
-                      )
-                    ),
-                    child: Stack(
-                      children: <Widget>[
-                        Positioned(
-                        left: 30,
-                        width: 80,
-                        height: 200,
-                        child:Container(
-                          decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('assets/light-1.png')
-                              )
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 140,
-                        width: 80,
-                        height: 150,
-                        child:Container(
-                          decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('assets/light-2.png')
-                              )
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        right: 40,
-                        top: 40,
-                        width: 80,
-                        height: 150,
-                        child: Container(
-                          decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('assets/clock.png')
-                              )
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 30,
-                        top: 190,
-                        width: 80,
-                        height: 150,
-                        child: Container(
-                          decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('assets/timetable.png')
-                              )
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 70,
-                        top: 280,
-                        width: 80,
-                        height: 150,
-                        child: Container(
-                          decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('assets/notif.png')
-                              )
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        child:Container(
-                          margin: EdgeInsets.only(top: 50),
-                          child: Center(
-                            child: Text("Welcome",style: GoogleFonts.openSans(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold),),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(40.0),
-                  child: Column(
-                    children: <Widget>[Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          color: const Color.fromRGBO(143, 148, 251,0.7),
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Color.fromRGBO(143, 148, 251, .2),
-                                blurRadius: 20,
-                                offset: Offset(0, 10)
-                            )
-                          ]
-                      ),
-                      child: Container(
-                        child: DropdownButtonExample(),
-                      ),
-                    ),
-                    ],
-                  ),
-                ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("assets/home.png"), fit: BoxFit.cover),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SingleChildScrollView(
+              physics: const NeverScrollableScrollPhysics(),
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 300,
+                      child: Stack(
+                        children: <Widget>[
+                          Positioned(
+                            child: Container(
+                              margin: EdgeInsets.only(top: 145),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "WELCOME",
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: 40,
 
-              ],
-            ),
-          ),
-          Footer(backgroundColor: Colors.transparent,
-              child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  RichText(
-                    text: TextSpan(
-                      text: "Created by : ",
-                      style: GoogleFonts.quicksand(color: Colors.grey),
-                      children: <TextSpan>[
-                        TextSpan(text: 'Yassir Rifi', style: GoogleFonts.quicksand(color: Get.isDarkMode? Colors.white:Colors.black87)),
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 4,
+                                    width: 170,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(2),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+
+                        ],
+                    ),
+                  ),
+                  const SizedBox(height: 250,),
+                  Padding(
+                    padding: EdgeInsets.all(40.0),
+                    child: Column(
+                      children: <Widget>[Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: const Color.fromRGBO(143, 148, 251,0.7),
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Color.fromRGBO(143, 148, 251, .2),
+                                  blurRadius: 20,
+                                  offset: Offset(0, 10)
+                              )
+                            ]
+                        ),
+                        child: Container(
+                          child: DropdownButtonExample(),
+                        ),
+                      ),
                       ],
                     ),
                   ),
-                  Text("“ DEVOWFS203 „",style: GoogleFonts.quicksand(color: Get.isDarkMode? Colors.white70:Colors.black87 , fontSize: 12))
+
                 ],
-              )
-          )
-        ],
+              ),
+            ),
+            Footer(backgroundColor: Colors.transparent,
+                child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                        text: "Created by : ",
+                        style: GoogleFonts.quicksand(color: Colors.black54),
+                        children: <TextSpan>[
+                          TextSpan(text: 'Yassir Rifi', style: GoogleFonts.quicksand(color: Get.isDarkMode? Colors.white:Colors.black87)),
+                        ],
+                      ),
+                    ),
+                    Text("“ DEVOWFS203 „",style: GoogleFonts.quicksand(color: Get.isDarkMode? Colors.white70:Colors.black87 , fontSize: 12))
+                  ],
+                )
+            )
+          ],
+        ),
       ),
 
     );
@@ -244,10 +199,10 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
                 value: value.name,
                 child: Center(child:
                 Text(value.name.toString(),style: GoogleFonts
-                    .openSans(
+                    .poppins(
                   textStyle: TextStyle(
 
-                      fontWeight: FontWeight.bold,
+
                       color: Colors.white),
                 ))),
               );

@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.nticrabat.notiUpp.app-mergeDebugResources-16:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Setup Game\\Desktop\\IOS VERSION\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "from": {
+                        "startLines": "3,17",
+                        "startColumns": "4,4",
+                        "startOffsets": "172,1014",
+                        "endLines": "10,19",
+                        "endColumns": "12,12",
+                        "endOffsets": "672,1178"
+                    },
+                    "to": {
+                        "startLines": "2,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,433",
+                        "endLines": "8,11",
+                        "endColumns": "12,12",
+                        "endOffsets": "428,597"
+                    }
+                }
+            ]
+        }
+    ]
+}

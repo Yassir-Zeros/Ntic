@@ -1,0 +1,390 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.nticrabat.notiUpp"
+4    android:versionCode="3"
+5    android:versionName="1.4.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:3:5-66
+11-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:3:22-64
+12    <uses-permission android:name="android.permission.VIBRATE" />
+12-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:4:5-66
+12-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:4:22-63
+13    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+13-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:5:5-80
+13-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:5:22-78
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:10:5-68
+14-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:10:22-65
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissions options for the `notification` group -->
+15-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:11:5-79
+15-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:11:22-76
+16    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+16-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:13:5-77
+16-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:13:22-74
+17    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+17-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:11:5-81
+17-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:11:22-78
+18    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+18-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:12:5-79
+18-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:12:22-76
+19    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+19-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:28:5-82
+19-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:28:22-79
+20    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+20-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\9de19d473578807644516b1454a619de\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:25:5-79
+20-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\9de19d473578807644516b1454a619de\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:25:22-76
+21    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+21-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:26:5-110
+21-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:26:22-107
+22
+23    <application
+24        android:name="android.app.Application"
+24-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:8:9-42
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.6.0] C:\Users\Setup Game\.gradle\caches\transforms-3\31403c5ff3058da4da9bb079206b78fa\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:9:9-43
+27        android:label="Ntic Notify" >
+27-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:7:9-36
+28        <activity
+28-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:10:9-32:20
+29            android:name="com.nticrabat.notiUpp.MainActivity"
+29-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:11:13-41
+30            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+30-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:15:13-163
+31            android:exported="true"
+31-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:12:13-36
+32            android:hardwareAccelerated="true"
+32-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:16:13-47
+33            android:launchMode="singleTop"
+33-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:13:13-43
+34            android:theme="@style/LaunchTheme"
+34-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:14:13-47
+35            android:windowSoftInputMode="adjustResize" >
+35-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:17:13-55
+36
+37            <!--
+38                 Specifies an Android theme to apply to this Activity as soon as
+39                 the Android process has started. This theme is visible to the user
+40                 while the Flutter UI initializes. After that, this theme continues
+41                 to determine the Window background behind the Flutter UI.
+42            -->
+43
+44            <meta-data
+44-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:23:13-26:17
+45                android:name="io.flutter.embedding.android.NormalTheme"
+45-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:24:15-70
+46                android:resource="@style/NormalTheme" />
+46-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:25:15-52
+47
+48            <intent-filter>
+48-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:28:13-31:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:29:17-68
+49-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:29:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:30:17-76
+51-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:30:27-74
+52            </intent-filter>
+53        </activity>
+54        <!--
+55             Don't delete the meta-data below.
+56             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+57        -->
+58        <meta-data
+58-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:35:9-37:33
+59            android:name="flutterEmbedding"
+59-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:36:13-44
+60            android:value="2" />
+60-->C:\Users\Setup Game\Desktop\IOS VERSION\android\app\src\main\AndroidManifest.xml:37:13-30
+61
+62        <service
+62-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:16:9-19:72
+63            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+63-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:17:13-107
+64            android:exported="false"
+64-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:18:13-37
+65            android:permission="android.permission.BIND_JOB_SERVICE" />
+65-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:19:13-69
+66        <service
+66-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:20:9-26:19
+67            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+67-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:21:13-97
+68            android:exported="false" >
+68-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-37
+69            <intent-filter>
+69-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:23:13-25:29
+70                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+70-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:24:17-78
+70-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:24:25-75
+71            </intent-filter>
+72        </service>
+73
+74        <receiver
+74-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:28:9-35:20
+75            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+75-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:29:13-98
+76            android:exported="true"
+76-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:30:13-36
+77            android:permission="com.google.android.c2dm.permission.SEND" >
+77-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:31:13-73
+78            <intent-filter>
+78-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:32:13-34:29
+79                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+79-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:33:17-81
+79-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:33:25-78
+80            </intent-filter>
+81        </receiver>
+82
+83        <service
+83-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:37:9-41:19
+84            android:name="com.google.firebase.components.ComponentDiscoveryService"
+84-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:37:18-89
+85            android:directBootAware="true"
+85-->[com.google.firebase:firebase-common:20.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\9dcca712b8282bf8dd8be646db29c038\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+86            android:exported="false" >
+86-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:54:13-37
+87            <meta-data
+87-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:38:13-40:85
+88                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+88-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:39:17-128
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:40:17-82
+90            <meta-data
+90-->[:firebase_core] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_core\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-13:85
+91                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+91-->[:firebase_core] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_core\intermediates\merged_manifest\release\AndroidManifest.xml:12:17-124
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[:firebase_core] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_core\intermediates\merged_manifest\release\AndroidManifest.xml:13:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:55:13-57:85
+94                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+94-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:56:17-119
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:57:17-82
+96            <meta-data
+96-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Setup Game\.gradle\caches\transforms-3\aae18047fe3607350c48baae5044aab6\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+97                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+97-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Setup Game\.gradle\caches\transforms-3\aae18047fe3607350c48baae5044aab6\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Setup Game\.gradle\caches\transforms-3\aae18047fe3607350c48baae5044aab6\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+99            <meta-data
+99-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\aa83641a53be1b4987d37a29a7e5901e\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:32:13-34:85
+100                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+100-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\aa83641a53be1b4987d37a29a7e5901e\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:33:17-96
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\aa83641a53be1b4987d37a29a7e5901e\transformed\jetified-firebase-iid-21.1.0\AndroidManifest.xml:34:17-82
+102            <meta-data
+102-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\9de19d473578807644516b1454a619de\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:31:13-33:85
+103                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+103-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\9de19d473578807644516b1454a619de\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:32:17-139
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\9de19d473578807644516b1454a619de\transformed\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:33:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\0ef5421ed191e71e3bada4a6ffa02762\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:17:13-19:85
+106                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+106-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\0ef5421ed191e71e3bada4a6ffa02762\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:18:17-127
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\0ef5421ed191e71e3bada4a6ffa02762\transformed\jetified-firebase-installations-17.1.0\AndroidManifest.xml:19:17-82
+108        </service>
+109
+110        <provider
+110-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:43:9-47:38
+111            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+111-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:44:13-102
+112            android:authorities="com.nticrabat.notiUpp.flutterfirebasemessaginginitprovider"
+112-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:45:13-88
+113            android:exported="false"
+113-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:46:13-37
+114            android:initOrder="99" />
+114-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:47:13-35
+115
+116        <receiver
+116-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:16:9-18:40
+117            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
+117-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:17:13-91
+118            android:exported="false" />
+118-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:18:13-37
+119        <receiver
+119-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:19:9-21:40
+120            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+120-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:20:13-97
+121            android:exported="false" />
+121-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:21:13-37
+122        <receiver
+122-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:22:9-31:20
+123            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+123-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:23:13-101
+124            android:exported="false" >
+124-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:24:13-37
+125            <intent-filter>
+125-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:25:13-30:29
+126                <action android:name="android.intent.action.BOOT_COMPLETED" />
+126-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:26:17-79
+126-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:26:25-76
+127                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+127-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:27:17-84
+127-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:27:25-81
+128                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+128-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:28:17-82
+128-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:28:25-79
+129                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+129-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:29:17-82
+129-->[:flutter_local_notifications] C:\Users\Setup Game\Desktop\IOS VERSION\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:29:25-79
+130            </intent-filter>
+131        </receiver>
+132
+133        <activity
+133-->[:url_launcher_android] C:\Users\Setup Game\Desktop\IOS VERSION\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-13:74
+134            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+134-->[:url_launcher_android] C:\Users\Setup Game\Desktop\IOS VERSION\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-74
+135            android:exported="false"
+135-->[:url_launcher_android] C:\Users\Setup Game\Desktop\IOS VERSION\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-37
+136            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+136-->[:url_launcher_android] C:\Users\Setup Game\Desktop\IOS VERSION\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-71
+137
+138        <uses-library
+138-->[androidx.window:window:1.0.0-beta04] C:\Users\Setup Game\.gradle\caches\transforms-3\3bdc08e47eb69ea8886195fe1930e1d3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+139            android:name="androidx.window.extensions"
+139-->[androidx.window:window:1.0.0-beta04] C:\Users\Setup Game\.gradle\caches\transforms-3\3bdc08e47eb69ea8886195fe1930e1d3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+140            android:required="false" />
+140-->[androidx.window:window:1.0.0-beta04] C:\Users\Setup Game\.gradle\caches\transforms-3\3bdc08e47eb69ea8886195fe1930e1d3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+141        <uses-library
+141-->[androidx.window:window:1.0.0-beta04] C:\Users\Setup Game\.gradle\caches\transforms-3\3bdc08e47eb69ea8886195fe1930e1d3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+142            android:name="androidx.window.sidecar"
+142-->[androidx.window:window:1.0.0-beta04] C:\Users\Setup Game\.gradle\caches\transforms-3\3bdc08e47eb69ea8886195fe1930e1d3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+143            android:required="false" />
+143-->[androidx.window:window:1.0.0-beta04] C:\Users\Setup Game\.gradle\caches\transforms-3\3bdc08e47eb69ea8886195fe1930e1d3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+144
+145        <receiver
+145-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:31:9-38:20
+146            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+146-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:32:13-78
+147            android:exported="true"
+147-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:33:13-36
+148            android:permission="com.google.android.c2dm.permission.SEND" >
+148-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:34:13-73
+149            <intent-filter>
+149-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:32:13-34:29
+150                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+150-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:33:17-81
+150-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:33:25-78
+151            </intent-filter>
+152        </receiver>
+153        <!--
+154             FirebaseMessagingService performs security checks at runtime,
+155             but set to not exported to explicitly avoid allowing another app to call it.
+156        -->
+157        <service
+157-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:44:9-51:19
+158            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+158-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:45:13-82
+159            android:directBootAware="true"
+159-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:46:13-43
+160            android:exported="false" >
+160-->[com.google.firebase:firebase-messaging:23.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\de6d17a180da9803805263b034e457b6\transformed\jetified-firebase-messaging-23.1.0\AndroidManifest.xml:47:13-37
+161            <intent-filter android:priority="-500" >
+161-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:23:13-25:29
+162                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+162-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:24:17-78
+162-->[:firebase_messaging] C:\Users\Setup Game\Desktop\IOS VERSION\build\firebase_messaging\intermediates\merged_manifest\release\AndroidManifest.xml:24:25-75
+163            </intent-filter>
+164        </service>
+165        <service
+165-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\2870f379aed61a2dc399fe36eaed2f1e\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+166            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+166-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\2870f379aed61a2dc399fe36eaed2f1e\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+167            android:exported="false" >
+167-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\2870f379aed61a2dc399fe36eaed2f1e\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+168            <meta-data
+168-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\2870f379aed61a2dc399fe36eaed2f1e\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+169                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+169-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\2870f379aed61a2dc399fe36eaed2f1e\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+170                android:value="cct" />
+170-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\2870f379aed61a2dc399fe36eaed2f1e\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+171        </service>
+172        <service
+172-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\9aba3bd125feb42ac72ec8a14e66fae3\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+173            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+173-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\9aba3bd125feb42ac72ec8a14e66fae3\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+174            android:exported="false"
+174-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\9aba3bd125feb42ac72ec8a14e66fae3\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+175            android:permission="android.permission.BIND_JOB_SERVICE" >
+175-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\9aba3bd125feb42ac72ec8a14e66fae3\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+176        </service>
+177
+178        <receiver
+178-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\9aba3bd125feb42ac72ec8a14e66fae3\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+179            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+179-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\9aba3bd125feb42ac72ec8a14e66fae3\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+180            android:exported="false" />
+180-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Setup Game\.gradle\caches\transforms-3\9aba3bd125feb42ac72ec8a14e66fae3\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+181
+182        <provider
+182-->[com.google.firebase:firebase-common:20.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\9dcca712b8282bf8dd8be646db29c038\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+183            android:name="com.google.firebase.provider.FirebaseInitProvider"
+183-->[com.google.firebase:firebase-common:20.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\9dcca712b8282bf8dd8be646db29c038\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+184            android:authorities="com.nticrabat.notiUpp.firebaseinitprovider"
+184-->[com.google.firebase:firebase-common:20.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\9dcca712b8282bf8dd8be646db29c038\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+185            android:directBootAware="true"
+185-->[com.google.firebase:firebase-common:20.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\9dcca712b8282bf8dd8be646db29c038\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+186            android:exported="false"
+186-->[com.google.firebase:firebase-common:20.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\9dcca712b8282bf8dd8be646db29c038\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+187            android:initOrder="100" />
+187-->[com.google.firebase:firebase-common:20.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\9dcca712b8282bf8dd8be646db29c038\transformed\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+188
+189        <receiver
+189-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:29:9-33:20
+190            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+190-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:30:13-85
+191            android:enabled="true"
+191-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:31:13-35
+192            android:exported="false" >
+192-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:32:13-37
+193        </receiver>
+194
+195        <service
+195-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:35:9-38:40
+196            android:name="com.google.android.gms.measurement.AppMeasurementService"
+196-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:36:13-84
+197            android:enabled="true"
+197-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:37:13-35
+198            android:exported="false" />
+198-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:38:13-37
+199        <service
+199-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:39:9-43:72
+200            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+200-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:40:13-87
+201            android:enabled="true"
+201-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:41:13-35
+202            android:exported="false"
+202-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:42:13-37
+203            android:permission="android.permission.BIND_JOB_SERVICE" />
+203-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\Setup Game\.gradle\caches\transforms-3\d9129fd14aa6ae97d3d5373e9bf24954\transformed\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:43:13-69
+204
+205        <activity
+205-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Setup Game\.gradle\caches\transforms-3\185924ebc152dd5471e07b450016f228\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+206            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+206-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Setup Game\.gradle\caches\transforms-3\185924ebc152dd5471e07b450016f228\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+207            android:exported="false"
+207-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Setup Game\.gradle\caches\transforms-3\185924ebc152dd5471e07b450016f228\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+208            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+208-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Setup Game\.gradle\caches\transforms-3\185924ebc152dd5471e07b450016f228\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+209
+210        <meta-data
+210-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\bc9713ef8f7a101ae0fd6d41eed8e5be\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+211            android:name="com.google.android.gms.version"
+211-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\bc9713ef8f7a101ae0fd6d41eed8e5be\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+212            android:value="@integer/google_play_services_version" />
+212-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Setup Game\.gradle\caches\transforms-3\bc9713ef8f7a101ae0fd6d41eed8e5be\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+213    </application>
+214
+215</manifest>

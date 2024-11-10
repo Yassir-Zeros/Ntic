@@ -5,7 +5,9 @@ import '../main.dart';
 class AuthMiddleware extends GetMiddleware{
   @override
   RouteSettings? redirect(String? route){
-    if(groupName!.getString("gname") != null)
+    if(groupName!.getString("gname") != null) {
       return const RouteSettings(name: "/home");
+    }
+    return null;
   }
 }

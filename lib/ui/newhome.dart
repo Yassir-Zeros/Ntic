@@ -63,8 +63,7 @@ class _nHomePageState extends State<nHomePage> {
       });
       String DNow = DateFormat('dd/MM kk:mm a').format(DateTime.now());
       lastUpdate!.setString("LU", DNow);
-      var response = await http.get(Uri.parse(
-          "https://nticrabat.com/emploi/timetable/index.php?version=2&groupe=$groupeName"));
+      var response = await http.get(Uri.parse("https://nticrabat.com/emploi/timetable/index.php?version=2&groupe=$groupeName"));
       if (response.statusCode == 200) {
         APICacheDBModel cacheDBModel =
             APICacheDBModel(key: "API_TT", syncData: response.body);
@@ -116,6 +115,7 @@ class _nHomePageState extends State<nHomePage> {
     } else if (contexHeight < 600) {
       highval = 0;
     }
+    List oldTime = _times;
     List allDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     return Scaffold(
       backgroundColor: context.theme.backgroundColor,
@@ -131,17 +131,33 @@ class _nHomePageState extends State<nHomePage> {
                 ? RefreshIndicator(
                     color: bluishClr,
                     onRefresh: () async{
-                      setState(() {
-                        _times = [];
-                      });
-                      fetchTimeTable().then((value) {
+                      fetchTimeTable();
+                      bool resultCon = await InternetConnectionChecker().hasConnection;
+                      if (resultCon == true) {
                         setState(() {
-                          _times.addAll(value!);
+                          iscon = true;
                         });
-                      });
+                        String DNow = DateFormat('dd/MM kk:mm a').format(DateTime.now());
+                        lastUpdate!.setString("LU", DNow);
+                        var response = await http.get(Uri.parse("https://nticrabat.com/emploi/timetable/index.php?version=2&groupe=$groupeName"));
+                        if (response.statusCode == 200) {
+                          var newTime = jsonDecode(response.body);
+                          if (oldTime != newTime) {
+                            setState(() {
+                              _times = [];
+                              for (var tt in newTime) {
+                                _times.add(TimeTable.fromJson(tt));
+                              }
+                            });
+                          }
+                        }
+                      }else{
+                        fetchTimeTable();
+                      }
                     },
                     child: ListView(
                       children: [
+                        SizedBox(height: 3,),
                     Row(
                       children: [
                         const SizedBox(
@@ -153,8 +169,8 @@ class _nHomePageState extends State<nHomePage> {
                           child:Container(
                             margin: const EdgeInsets.only(
                                 left: 5, right: 5),
-                            height: contexHeight * 0.05,
-                            decoration: BoxDecoration(
+                            height: contexHeight * 0.04,
+                           decoration: BoxDecoration(
                               border: Border.all(
                                   color: Colors.white),
                               borderRadius:
@@ -179,7 +195,7 @@ class _nHomePageState extends State<nHomePage> {
                                                 maxLines:
                                                 1,
                                                 style: GoogleFonts
-                                                    .openSans(
+                                                    .poppins(
                                                   textStyle: const TextStyle(
                                                       fontSize: 25,
                                                       fontWeight: FontWeight.bold,
@@ -201,7 +217,7 @@ class _nHomePageState extends State<nHomePage> {
                           child:Container(
                             margin: const EdgeInsets.only(
                                 left: 5, right: 5),
-                            height: contexHeight * 0.05,
+                            height: contexHeight * 0.04,
                             decoration: BoxDecoration(
                               border: Border.all(
                                   color: Colors.white),
@@ -227,7 +243,7 @@ class _nHomePageState extends State<nHomePage> {
                                                 maxLines:
                                                 1,
                                                 style: GoogleFonts
-                                                    .openSans(
+                                                    .poppins(
                                                   textStyle: const TextStyle(
                                                       fontSize: 25,
                                                       fontWeight: FontWeight.bold,
@@ -246,10 +262,10 @@ class _nHomePageState extends State<nHomePage> {
                         Flexible(
                           flex: 1,
                           fit: FlexFit.tight,
-                          child: Container(
+                          child:Container(
                             margin: const EdgeInsets.only(
                                 left: 5, right: 5),
-                            height: contexHeight * 0.05,
+                            height: contexHeight * 0.04,
                             decoration: BoxDecoration(
                               border: Border.all(
                                   color: Colors.white),
@@ -275,7 +291,7 @@ class _nHomePageState extends State<nHomePage> {
                                                 maxLines:
                                                 1,
                                                 style: GoogleFonts
-                                                    .openSans(
+                                                    .poppins(
                                                   textStyle: const TextStyle(
                                                       fontSize: 25,
                                                       fontWeight: FontWeight.bold,
@@ -294,10 +310,10 @@ class _nHomePageState extends State<nHomePage> {
                         Flexible(
                           flex: 1,
                           fit: FlexFit.tight,
-                          child: Container(
+                          child:Container(
                             margin: const EdgeInsets.only(
                                 left: 5, right: 5),
-                            height: contexHeight * 0.05,
+                            height: contexHeight * 0.04,
                             decoration: BoxDecoration(
                               border: Border.all(
                                   color: Colors.white),
@@ -323,7 +339,7 @@ class _nHomePageState extends State<nHomePage> {
                                                 maxLines:
                                                 1,
                                                 style: GoogleFonts
-                                                    .openSans(
+                                                    .poppins(
                                                   textStyle: const TextStyle(
                                                       fontSize: 25,
                                                       fontWeight: FontWeight.bold,
@@ -366,10 +382,10 @@ class _nHomePageState extends State<nHomePage> {
                                         RichText(
                                           text: TextSpan(
                                             text: allDays[index] ,
-                                            style: GoogleFonts.alegreyaSansSc(
+                                            style: GoogleFonts.poppins(
                                                 textStyle: TextStyle(
                                                     fontSize: 20,
-                                                    fontWeight: FontWeight.bold,
+
                                                     color: Get.isDarkMode
                                                         ? secBlackmode
                                                         : bluishClr)),
@@ -393,8 +409,12 @@ class _nHomePageState extends State<nHomePage> {
                                           if (_times[i].jour ==
                                               allDays[index])
                                             if(_times[i].tempuratureIcon != null && _times[i].tempuratureIcon!="" && iscon == true)
-                                              Image.network(_times[i].tempuratureIcon!,
-                                                width: 25,height: 25,)
+                                              ClipRRect(
+                                                borderRadius: BorderRadius.circular(7.0),
+                                                child: Image.network(_times[i].tempuratureIcon!,
+
+                                                  width: 25,height: 25,),
+                                              )
                                       ],
                                     ),
                                   ),
@@ -414,21 +434,28 @@ class _nHomePageState extends State<nHomePage> {
                                               margin: const EdgeInsets.only(left: 5, right: 5),
                                               height: contexHeight * 0.08,
                                               decoration: BoxDecoration(
-                                                  boxShadow:[
+                                                  boxShadow: [
                                                     BoxShadow(
                                                       color: _times[i].nums ==
-                                                          "Free"? Colors.white.withOpacity(0):Colors.black,
-                                                        blurStyle: BlurStyle.normal,
-                                                        blurRadius:5,
-                                                        offset:const Offset(3,4))
+                                                          "Free"? Colors.white.withOpacity(0): Get.isDarkMode?Colors.black:Colors.grey.shade700,
+                                                      offset: const Offset(1,2),
+                                                      blurRadius:4,
+                                                    ),
+                                                    BoxShadow(
+                                                      color: _times[i].nums ==
+                                                          "Free"? Colors.white.withOpacity(0): Get.isDarkMode?Colors.black:Colors.grey.shade700,
+                                                      offset: const Offset(0,-1),
+                                                      blurRadius:4,
+                                                    )
                                                   ],
                                                 border: Border.all(
                                                     color: Get.isDarkMode
                                                         ? Colors.white
-                                                        : bluishClr),
+                                                        : _times[i].nums ==
+                                                        "Free"? bluishClr:Colors.white),
                                                 borderRadius:
                                                     BorderRadius.circular(
-                                                        4),
+                                                        7),
                                                 color: _times[i].etat ==
                                                         "Absent"
                                                     ? yellowClr
@@ -459,7 +486,7 @@ class _nHomePageState extends State<nHomePage> {
                                                                     maxLines:
                                                                         1,
                                                                     style: GoogleFonts
-                                                                        .openSans(
+                                                                        .poppins(
                                                                       textStyle: const TextStyle(
                                                                           fontSize: 13,
                                                                           fontWeight: FontWeight.bold,
@@ -471,10 +498,9 @@ class _nHomePageState extends State<nHomePage> {
                                                                     maxLines:
                                                                         1,
                                                                     style: GoogleFonts
-                                                                        .openSans(
+                                                                        .poppins(
                                                                       textStyle: const TextStyle(
                                                                           fontSize: 10,
-                                                                          fontWeight: FontWeight.bold,
                                                                           color: Colors.white),
                                                                     ))
                                                               ],
@@ -490,7 +516,7 @@ class _nHomePageState extends State<nHomePage> {
                                                                     maxLines:
                                                                         1,
                                                                     style: GoogleFonts
-                                                                        .openSans(
+                                                                        .poppins(
                                                                       textStyle: TextStyle(
                                                                           fontSize: 13,
                                                                           fontWeight: FontWeight.bold,
@@ -500,10 +526,9 @@ class _nHomePageState extends State<nHomePage> {
                                                                     _times[i]
                                                                         .prof,
                                                                     style: GoogleFonts
-                                                                        .openSans(
+                                                                        .poppins(
                                                                       textStyle: TextStyle(
                                                                           fontSize: 10,
-                                                                          fontWeight: FontWeight.bold,
                                                                           color: absentText),
                                                                     )),
                                                               ],
@@ -528,7 +553,7 @@ class _nHomePageState extends State<nHomePage> {
                                                                         .etat,
                                                                     maxLines: 1,
                                                                     style: GoogleFonts
-                                                                        .openSans(
+                                                                        .poppins(
                                                                       textStyle: const TextStyle(
                                                                           fontWeight: FontWeight.bold,
                                                                           color: Colors.white),
@@ -538,10 +563,8 @@ class _nHomePageState extends State<nHomePage> {
                                                                         .prof,
                                                                     maxLines: 1,
                                                                     style: GoogleFonts
-                                                                        .openSans(
+                                                                        .poppins(
                                                                       textStyle: const TextStyle(
-
-                                                                          fontWeight: FontWeight.bold,
                                                                           color: Colors.white),
                                                                     )),
                                                                 Container(
@@ -561,8 +584,8 @@ class _nHomePageState extends State<nHomePage> {
                                                                     maxLines:
                                                                         1,
                                                                     style: GoogleFonts
-                                                                        .openSans(
-                                                                      textStyle: TextStyle(
+                                                                        .poppins(
+                                                                      textStyle: const TextStyle(
                                                                           fontWeight: FontWeight.bold,
                                                                           color: Colors.transparent),
                                                                     )),
@@ -613,9 +636,9 @@ class _nHomePageState extends State<nHomePage> {
       title: Column(
         children: [
           Text(groupeName!,
-              style: GoogleFonts.openSans(
+              style: GoogleFonts.poppins(
                   color: Get.isDarkMode ? Colors.white : bluishClr,
-                  fontWeight: FontWeight.bold)),
+                  )),
           iscon == false
               ? Text("Last Update: $lastUPTime",
                   style: GoogleFonts.quicksand(
