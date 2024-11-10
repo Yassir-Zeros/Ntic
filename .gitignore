@@ -34,6 +34,10 @@ migrate_working_dir/
 
 # Symbolication related
 app.*.symbols
+# Ignore APK, AAB, and Dart tool files
+/build/app/outputs/apk/debug/app-debug.apk
+/build/app/intermediates/intermediary_bundle/release/packageReleaseBundle/intermediary-bundle.aab
+.dart_tool/flutter_build/*.dill
 
 # Obfuscation related
 app.*.map.json
